@@ -1,44 +1,43 @@
-import json
-from transformers import pipeline
-from pathlib import Path
+# File: main.py
+# Author: William Jahner
 
-def load_knowledge_base(path=Path(__file__).parent.parent / "data/baby_knowledge.json"):
-    with open(path, "r") as f:
-        data = json.load(f)
-    # Flatten into a single context string
-    all_entries = []
-    for category in data.values():
-        for entry in category:
-            all_entries.append(entry["description"])
-    return " ".join(all_entries)
+from services.ai_service import AIService
+from services.kb_loader import load_knowledge_base
 
+######################################################################
+# Module: print_intro_message
+# Description: Prints the introductory message for a user starting up
+#              the application
+# Input: N/A
+# Returns: N/A
+######################################################################
 def print_intro_message():
     print("\nWelcome to the New Parent AI Assistant!")
     print("If you wish to end the program at any time, enter 'exit', 'end', or 'quit'\n\n")
 
-class NewParentAssistant:
-    def __init__(self, knowledge_base_text):
-        self.qa_pipeline = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
-        self.context = knowledge_base_text
-
-    def ask(self, question: str) -> str:
-        try:
-            result = self.qa_pipeline(question=question, context=self.context)
-            return result["answer"]
-        except Exception as e:
-            return f"Sorry, I couldn’t find an answer. ({e})"
-
+#############################################
+### Entry point of the application (main) ###
+#############################################
 if __name__ == "__main__":
+    # Load the knowledge base
     knowledge_base_text = load_knowledge_base()
-    new_parent_assistant = NewParentAssistant(knowledge_base_text)
+
+    # Instantiate a new AI Service
+    new_parent_ai_assistant = AIService(knowledge_base_text)
+
+    # Print the introductory message
     print_intro_message()
 
-    # Note that we start running the AI assistant here
+    # Run the New Parent AI Assistant application
+    # Note that the application runs until the user enters an escape keyword
     while True:
+        # Prompt the user to ask a question and save the user's input
         user_input = input("What would you like to know?\n").strip().lower()
 
+        # If the user enters 'exit', 'end', or 'quit', exit the application
         if user_input in ("exit", "end", "quit"):
-            print("Ending New Parent AI Assistant...")
+            print("Closing the New Parent AI Assistant...")
             break
 
-        print(f"Response: {new_parent_assistant.ask(user_input)}\n")
+        # Print the response to the user's question
+        print(f"Response: {new_parent_ai_assistant.ask_question(user_input)}\n")
