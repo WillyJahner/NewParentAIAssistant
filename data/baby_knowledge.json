@@ -1,0 +1,11 @@
+{
+  "milestones": [
+    {"age": "3 months", "description": "Babies usually can lift their head and chest while on their tummy."},
+    {"age": "6 months", "description": "Many babies start to sit with support and may begin solid foods."},
+    {"age": "12 months", "description": "Most babies can stand with help and may take their first steps."}
+  ],
+  "feeding": [
+    {"age": "newborn", "description": "Newborns usually feed every 2 to 3 hours."},
+    {"age": "6 months", "description": "At 6 months, babies often sleep for longer stretches at night."}
+  ]
+}
