@@ -171,5 +171,91 @@
                 "A 6 month old baby that is formula fed should get about 24 to 40 ounces per day."
             ]
         }
+    },
+    "sleeping": {
+        "newborn (0 to 6 weeks)": {
+            "total_sleep": [
+                "A newborn baby for the first 6 weeks typically sleeps about 14 to 17 hours in a 24-hour period."
+            ],
+            "naps": [
+                "A newborn baby for the first 6 weeks typically takes 4 to 6 naps per day."
+            ],
+            "daytime_sleep": [
+                "A newborn baby for the first 6 weeks typically sleeps about 4 to 5 hours during the day."
+            ],
+            "awake_windows": [
+                "A newborn baby for the first 6 weeks typically has 45 to 60 minute wake windows."
+            ]
+        },
+        "newborn (6 to 12 weeks)": {
+            "total_sleep": [
+                "A newborn baby for weeks 6 to 12 weeks (1.5 to 3 months) typically sleeps about 14 to 16 hours in a 24-hour period."
+            ],
+            "naps": [
+                "A newborn baby for weeks 6 to 12 weeks (1.5 to 3 months) typically takes 4 to 5 naps per day."
+            ],
+            "daytime_sleep": [
+                "A newborn baby for weeks 6 to 12 weeks (1.5 to 3 months) typically sleeps about 3 to 5 hours during the day."
+            ],
+            "awake_windows": [
+                "A newborn baby for weeks 6 to 12 weeks (1.5 to 3 months) typically has 60 to 90 minute wake windows."
+            ]
+        },
+        "3 to 4 months": {
+            "total_sleep": [
+                "A 3 to 4 month old baby typically sleeps about 14 to 15 hours in a 24-hour period."
+            ],
+            "naps": [
+                "A 3 to 4 month old baby typically takes 3 to 4 naps per day."
+            ],
+            "daytime_sleep": [
+                "A 3 to 4 month old baby typically sleeps about 3 to 4 hours during the day."
+            ],
+            "awake_windows": [
+                "A 3 to 4 month old baby typically has 75 to 120 minute wake windows."
+            ]
+        },
+        "5 to 6 months": {
+            "total_sleep": [
+                "A 5 to 6 month old baby typically sleeps about 13 to 15 hours in a 24-hour period."
+            ],
+            "naps": [
+                "A 5 to 6 month old baby typically takes 3 naps per day."
+            ],
+            "daytime_sleep": [
+                "A 5 to 6 month old baby typically sleeps about 2.5 to 3.5 hours during the day."
+            ],
+            "awake_windows": [
+                "A 5 to 6 month old baby typically has 2 to 2.5 hour wake windows."
+            ]
+        },
+        "7 to 9 months": {
+            "total_sleep": [
+                "A 7 to 9 month old baby typically sleeps about 13 to 14 hours in a 24-hour period."
+            ],
+            "naps": [
+                "A 7 to 9 month old baby typically takes 2 to 3 naps per day."
+            ],
+            "daytime_sleep": [
+                "A 7 to 9 month old baby typically sleeps about 2 to 3 hours during the day."
+            ],
+            "awake_windows": [
+                "A 7 to 9 month old baby typically has 2.5 to 3 hour wake windows."
+            ]
+        },
+        "10 to 12 months": {
+            "total_sleep": [
+                "A 10 to 12 month old baby typically sleeps about 13 to 14 hours in a 24-hour period."
+            ],
+            "naps": [
+                "A 10 to 12 month old baby typically takes 2 naps per day."
+            ],
+            "daytime_sleep": [
+                "A 10 to 12 month old baby typically sleeps 2 to 3 hours during the day."
+            ],
+            "awake_windows": [
+                "A 10 to 12 month old baby typically has 3 to 4 hour wake windows."
+            ]
+        }
     }
 }
