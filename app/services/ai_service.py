@@ -1,6 +1,7 @@
 # File: ai_service.py
 # Author: William Jahner
 
+from sentence_transformers import SentenceTransformer, util
 from transformers import pipeline
 
 ######################################################################
@@ -18,9 +19,11 @@ class AIService:
     # Returns: N/A
     ######################################################################
     def __init__(self, context_text: str):
-        self.qa_pipeline = pipeline("question-answering", model="distilbert-base-cased-distilled-squad")
+        # Load the QA model and embedding model
+        self.qa_model = pipeline("question-answering", model="deepset/roberta-base-squad2")
+        self.embedder = SentenceTransformer("all-MiniLM-L6-v2")
         self.context = context_text
-
+    
     ######################################################################
     # Module: ask_question
     # Description: Returns an answer for a user's question by using the

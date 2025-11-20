@@ -1,11 +1,175 @@
 {
-  "milestones": [
-    {"age": "3 months", "description": "Babies usually can lift their head and chest while on their tummy."},
-    {"age": "6 months", "description": "Many babies start to sit with support and may begin solid foods."},
-    {"age": "12 months", "description": "Most babies can stand with help and may take their first steps."}
-  ],
-  "feeding": [
-    {"age": "newborn", "description": "Newborns usually feed every 2 to 3 hours."},
-    {"age": "6 months", "description": "At 6 months, babies often sleep for longer stretches at night."}
-  ]
+    "milestones": {
+        "2 months": {
+            "social_emotional": [
+                "Calms down when spoken to or picked up",
+                "Looks at your face",
+                "Seems happy to see you when you walk up to baby",
+                "Smiles when you talk to or smile at baby"
+            ],
+            "language_communication": [
+                "Makes sounds other than crying",
+                "Reacts to loud sounds"
+            ],
+            "cognitive": [
+                "Watches you as you move",
+                "Looks at a toy for several seconds"
+            ],
+            "movement_physical": [
+                "Holds head up when on tummy",
+                "Moves both arms and both legs",
+                "Opens hands briefly"
+            ]
+        },
+        "4 months": {
+            "social_emotional": [
+                "Smiles on his own to get your attention",
+                "Chuckles (not yet a full laugh) when you try to make him laugh",
+                "Looks at you, moves, or makes sounds to get or keep your attention"
+            ],
+            "language_communication": [
+                "Makes sounds like oooo, aahh (cooing)",
+                "Makes sounds back when you talk to him",
+                "Turns head towards the sound of your voice"
+            ],
+            "cognitive": [
+                "If hungry, opens mouth when he sees breast or bottle",
+                "Looks at own hands with interest"
+            ],
+            "movement_physical": [
+                "Holds head steady without support when you are holding him",
+                "Holds a toy when you put it in his hand",
+                "Uses his arm to swing at toys",
+                "Brings hands to mouth",
+                "Pushes up onto elbows/forearms when on tummy"
+            ]
+        },
+        "6 months": {
+            "social_emotional": [
+                "Knows familiar people",
+                "Likes to look at self in a mirror",
+                "Laughs"
+            ],
+            "language_communication": [
+                "Takes turns making sounds with you",
+                "Blows raspberries (sticks tongue out and blows)",
+                "Makes squealing noises"
+            ],
+            "cognitive": [
+                "Puts things in her mouth to explore them",
+                "Reaches to grab a toy she wants",
+                "Closes lips to show she doesn’t want more food"
+            ],
+            "movement_physical": [
+                "Rolls from tummy to back",
+                "Pushes up with straight arms when on tummy",
+                "Leans on hands to support herself when sitting"
+            ]
+        },
+        "9 months": {
+            "social_emotional": [
+                "Is shy, clingy, or fearful around strangers",
+                "Shows several facial expressions, like happy, sad, angry, and surprised",
+                "Looks when you call her name",
+                "Reacts when you leave (looks, reaches for you, or cries)",
+                "Smiles or laughs when you play peek-a-boo"
+            ],
+            "language_communication": [
+                "Makes a lot of different sounds like mamamama and bababababa",
+                "Lifts arms up to be picked up"
+            ],
+            "cognitive": [
+                "Looks for objects when dropped out of sight (like his spoon or toy)",
+                "Bangs two things together"
+            ],
+            "movement_physical": [
+                "Gets to a sitting position by herself",
+                "Moves things from one hand to her other hand",
+                "Uses fingers to rake food towards himself",
+                "Sits without support"
+            ]
+        },
+        "12 months": {
+            "social_emotional": [
+                "Plays games with you, like pat-a-cake"
+            ],
+            "language_communication": [
+                "Waves bye-bye",
+                "Calls a parent mama or dada or another special name",
+                "Understands no (pauses briefly or stops when you say it)"
+            ],
+            "cognitive": [
+                "Puts something in a container, like a block in a cup",
+                "Looks for things he sees you hide, like a toy under a blanket"
+            ],
+            "movement_physical": [
+                "Pulls up to stand",
+                "Walks, holding on to furniture",
+                "Drinks from a cup without a lid, as you hold it",
+                "Picks things up between thumb and pointer finger, like small bits of food"
+            ]
+        }
+    },
+    "feeding": {
+        "newborn (first week)": {
+            "breastfed": [
+                "A newborn baby that is breastfed should be fed every 2 to 3 hours.",
+                "A newborn baby that is breastfed should get about 0.5 to 2 ounces per feeding.",
+                "A newborn baby that is breastfed should get about 5 to 20 ounces per day."
+            ],
+            "formula_fed": [
+                "A newborn baby that is formula fed should be fed every 2 to 3 hours.",
+                "A newborn baby that is formula fed should get about 1 to 2 ounces per feeding.",
+                "A newborn baby that is formula fed should get about 8 to 24 ounces per day."
+            ]
+        },
+        "1 month": {
+            "breastfed": [
+                "A 1 month old baby that is breastfed should be fed every TODO...",
+                "A 1 month old baby that is breastfed should get about 2 to 4 ounces per feeding.",
+                "A 1 month old baby that is breastfed should get about 15 to 30 ounces per day."
+            ],
+            "formula_fed": [
+                "A 1 month old baby that is formula fed should be fed every TODO...",
+                "A 1 month old baby that is formula fed should get about 2 to 4 ounces per feeding.",
+                "A 1 month old baby that is formula fed should get about 18 to 32 ounces per day."
+            ]
+        },
+        "2 month": {
+            "breastfed": [
+                "A 2 month old baby that is breastfed should be fed every TODO...",
+                "A 2 month old baby that is breastfed should get about 3 to 5 ounces per feeding.",
+                "A 2 month old baby that is breastfed should get about 18 to 30 ounces per day."
+            ],
+            "formula_fed": [
+                "A 2 month old baby that is formula fed should be fed every TODO...",
+                "A 2 month old baby that is formula fed should get about 4 to 6 ounces per feeding.",
+                "A 2 month old baby that is formula fed should get about 24 to 32 ounces per day."
+            ]
+        },
+        "3 to 5 months": {
+            "breastfed": [
+                "A 3 to 5 month old baby that is breastfed should be fed every TODO...",
+                "A 3 to 5 month old baby that is breastfed should get about 4 to 6 ounces per feeding.",
+                "A 3 to 5 month old baby that is breastfed should get about 24 to 32 ounces per day."
+            ],
+            "formula_fed": [
+                "A 3 to 5 month old baby that is formula fed should be fed every TODO...",
+                "A 3 to 5 month old baby that is formula fed should get about 6 to 7 ounces per feeding.",
+                "A 3 to 5 month old baby that is formula fed should get about 30 to 42 ounces per day."
+            ]
+        },
+        "6 months": {
+            "breastfed": [
+                "A 6 month old baby that is breastfed should be fed every TODO...",
+                "A 6 month old baby that is breastfed should get about 4 to 8 ounces per feeding.",
+                "A 6 month old baby that is breastfed should get about 20 to 32 ounces per day."
+            ],
+            "formula_fed": [
+                "A 6 month old baby that is formula fed should be fed every TODO...",
+                "A 6 month old baby that is formula fed should get about 6 to 8 ounces per feeding.",
+                "A 6 month old baby that is formula fed should get about 24 to 40 ounces per day."
+            ]
+        }
+    }
 }
