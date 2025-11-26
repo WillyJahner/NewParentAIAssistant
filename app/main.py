@@ -3,8 +3,8 @@
 
 from sentence_transformers import SentenceTransformer, util
 import torch
-from services.ai_service import AIService
-from services.kb_loader import load_knowledge_base
+from .services.ai_service import AIService
+from .services.kb_loader import load_knowledge_base
 
 ######################################################################
 # Class: NewParentAIAssistantApp
