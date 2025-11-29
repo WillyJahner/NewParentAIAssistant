@@ -39,8 +39,8 @@ class TestAIService(unittest.TestCase):
     @patch("app.services.ai_service.pipeline")
     def test_ask_question_success(self, mock_pipeline, mock_embedder):
         # Mock qa_pipeline and embedder
-        mock_pipeline.return_value = MagicMock(name="qa_mock")
-        mock_embedder.return_value = MagicMock()
+        mock_pipeline.return_value = MagicMock(name="mock_qa_pipeline")
+        mock_embedder.return_value = MagicMock(name="mock_embedder")
 
         # Create a new AIService
         service = AIService("test context")
@@ -70,8 +70,8 @@ class TestAIService(unittest.TestCase):
     @patch("app.services.ai_service.pipeline")
     def test_ask_question_exception(self, mock_pipeline, mock_embedder):
         # Mock qa_pipeline and embedder
-        mock_pipeline.return_value = MagicMock()
-        mock_embedder.return_value = MagicMock()
+        mock_pipeline.return_value = MagicMock(name="mock_qa_pipeline")
+        mock_embedder.return_value = MagicMock(name="mock_embedder")
 
         # Create a new AIService
         service = AIService("test context")
