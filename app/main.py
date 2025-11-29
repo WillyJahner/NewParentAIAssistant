@@ -62,7 +62,7 @@ class NewParentAIAssistantApp:
     def answer_question(self, question):
         contexts = self.find_best_entries(question)
         context_str = " ".join(contexts)
-        result = self.ai.qa_model(question=question, context=context_str)
+        result = self.ai.qa_pipeline(question=question, context=context_str)
         return result["answer"]
 
 ######################################################################

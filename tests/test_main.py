@@ -81,8 +81,8 @@ class MainTests(unittest.TestCase):
             mock_qa = MagicMock()
             mock_qa.return_value = {"answer": "Mocked answer"}
 
-            # Replace the real QA model with our mock
-            self.app.ai.qa_model = mock_qa
+            # Replace the real QA pipeline with our mock
+            self.app.ai.qa_pipeline = mock_qa
 
             # Call the tested function (answer_question)
             answer = self.app.answer_question("test question")

@@ -20,7 +20,7 @@ class AIService:
     ######################################################################
     def __init__(self, context_text: str):
         # Load the QA model and embedding model
-        self.qa_model = pipeline("question-answering", model="deepset/roberta-base-squad2")
+        self.qa_pipeline = pipeline("question-answering", model="deepset/roberta-base-squad2")
         self.embedder = SentenceTransformer("all-MiniLM-L6-v2")
         self.context = context_text
     
