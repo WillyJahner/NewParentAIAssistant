@@ -5,6 +5,7 @@ from sentence_transformers import SentenceTransformer, util
 import torch
 from .services.ai_service import AIService
 from .services.kb_loader import load_knowledge_base
+from .services.list_service import get_milestone_list
 
 ######################################################################
 # Class: NewParentAIAssistantApp
@@ -92,6 +93,11 @@ def main():
     # Print the introductory message
     print_intro_message()
 
+    # Create a list of keywords for listing services
+    # Note that for now this is only related to milestones, but in the future
+    # it could be expanded to other categories
+    list_keywords = ["milestone", "milestones", "developmental milestones"]
+
     # Main loop
     while True:
 
@@ -103,9 +109,16 @@ def main():
             print("Closing the New Parent AI Assistant...")
             break
 
-        # Get the AI response
-        response = app.answer_question(user_input)
-        print(f"NLP RESPONSE: {response}\n")
+        # If keywords are detected, route the user input to the listing service.
+        # Otherwise, route the user input to the AI (NLP) question answering service.
+        if any(word in user_input for word in list_keywords):
+            # Route to the listing service for milestones
+            milestone_list = get_milestone_list(knowledge_base, user_input)
+            print(f"{milestone_list}\n")
+        else:
+            # Route to the AI (NLP) question answering service
+            response = app.answer_question(user_input)
+            print(f"NLP RESPONSE: {response}\n")
 
 #############################################
 ### Entry point of the application (main) ###
