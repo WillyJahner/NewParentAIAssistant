@@ -87,8 +87,8 @@ class TestAIService(unittest.TestCase):
         self.assertIn("Sorry, the answer could not be determined.", answer)
         self.assertIn("Model failure", answer)
 
-####################################
-### Entry point of ai_service.py ###
-####################################
+#########################################
+### Entry point of test_ai_service.py ###
+#########################################
 if __name__ == "__main__":
     unittest.main()

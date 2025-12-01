@@ -18,7 +18,7 @@ from collections import defaultdict
 #     it returns an appropriate error message.
 ######################################################################
 def get_milestone_list(knowledge_base, question):
-    # 1. Extract age from question ("6 months", "4 month old", etc.)
+    # Extract age from question ("6 months", "4 month old", etc.)
     match = re.search(r"\b(\d{1,2})\s*month", question.lower())
     if not match:
         error_return = "Sorry, I couldn't determine an age from your question. " + \
@@ -27,10 +27,10 @@ def get_milestone_list(knowledge_base, question):
 
     age = f"{match.group(1)} months"
 
-    # 2. Prepare storage for categories and milestone items
+    # Prepare storage for categories and milestone items
     categories = defaultdict(list)
 
-    # 3. Look through the flattened knowledge base
+    # Look through the flattened knowledge base
     for label, text in knowledge_base:
         parts = label.split(" - ")
 
@@ -45,14 +45,14 @@ def get_milestone_list(knowledge_base, question):
         if entry_age == age:
             categories[sub_category].append(text)
 
-    # 4. Handle case where age is valid but no milestones are found
+    # Handle case where age is valid but no milestones are found
     if not categories:
         error_return = f"No milestone data found for {age}. " + \
                         "Note that the milestone data is from the American Academy of Pediatrics (AAP), " + \
                         "which specifies milestones at 2, 4, 6, 9, and 12 months."
         return error_return
 
-    # 5. Format output nicely
+    # Format output nicely
     output = [f"Developmental milestones for {age}:\n"]
     for category, items in categories.items():
         readable_category = category.replace("_", "/").title()

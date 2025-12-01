@@ -43,6 +43,7 @@ class MainTests(unittest.TestCase):
                                        "about developmental milestones, feeding, and sleep for babies in their first year.\033[0m")
             mock_print.assert_any_call("\033[36mFuture releases of this application will include more categories of baby care.\033[0m")
             mock_print.assert_any_call("\033[36mIf you wish to end the program at any time, enter 'exit', 'end', or 'quit'\n\n\033[0m")
+    
     ######################################################################
     # Module: test_find_best_entries
     # Description: Tests that the function find_best_entries returns top

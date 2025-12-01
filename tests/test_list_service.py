@@ -2,8 +2,6 @@
 # Author: William Jahner
 
 import unittest
-from collections import defaultdict
-import re
 from app.services.list_service import get_milestone_list
 
 ######################################################################
