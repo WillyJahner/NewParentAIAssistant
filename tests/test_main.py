@@ -37,13 +37,12 @@ class MainTests(unittest.TestCase):
         with patch("builtins.print") as mock_print:
             print_intro_message()
 
-            mock_print.assert_any_call("\nWelcome to the New Parent AI Assistant!")
-            mock_print.assert_any_call("This application is designed to help answer questions for new parents.")
-            mock_print.assert_any_call("This is the initial version of the application, so it only contains information " + \
-                                       "about developmental milestones, feeding, and sleep for babies in their first year.")
-            mock_print.assert_any_call("Future releases of this application will include more categories of baby care.")
-            mock_print.assert_any_call("If you wish to end the program at any time, enter 'exit', 'end', or 'quit'\n\n")
-
+            mock_print.assert_any_call("\n\033[36mWelcome to the New Parent AI Assistant!\033[0m")
+            mock_print.assert_any_call("\033[36mThis application is designed to help answer questions for new parents.\033[0m")
+            mock_print.assert_any_call("\033[36mThis is the initial version of the application, so it only contains information " + \
+                                       "about developmental milestones, feeding, and sleep for babies in their first year.\033[0m")
+            mock_print.assert_any_call("\033[36mFuture releases of this application will include more categories of baby care.\033[0m")
+            mock_print.assert_any_call("\033[36mIf you wish to end the program at any time, enter 'exit', 'end', or 'quit'\n\n\033[0m")
     ######################################################################
     # Module: test_find_best_entries
     # Description: Tests that the function find_best_entries returns top
