@@ -74,12 +74,12 @@ class NewParentAIAssistantApp:
 # Returns: N/A
 ######################################################################
 def print_intro_message():
-    print("\nWelcome to the New Parent AI Assistant!")
-    print("This application is designed to help answer questions for new parents.")
-    print("This is the initial version of the application, so it only contains information " + \
-          "about developmental milestones, feeding, and sleep for babies in their first year.")
-    print("Future releases of this application will include more categories of baby care.")
-    print("If you wish to end the program at any time, enter 'exit', 'end', or 'quit'\n\n")
+    print("\n\033[36mWelcome to the New Parent AI Assistant!\033[0m")
+    print("\033[36mThis application is designed to help answer questions for new parents.\033[0m")
+    print("\033[36mThis is the initial version of the application, so it only contains information " + \
+          "about developmental milestones, feeding, and sleep for babies in their first year.\033[0m")
+    print("\033[36mFuture releases of this application will include more categories of baby care.\033[0m")
+    print("\033[36mIf you wish to end the program at any time, enter 'exit', 'end', or 'quit'\n\n\033[0m")
 
 ######################################################################
 # Module: main
@@ -106,11 +106,11 @@ def main():
     while True:
 
         # Prompt the user for input
-        user_input = input("What would you like to know?\n").strip().lower()
+        user_input = input("\033[36mWhat would you like to know?\n\033[0m").strip().lower()
 
         # Check for exit conditions
         if user_input in ("exit", "end", "quit"):
-            print("Closing the New Parent AI Assistant...")
+            print("\033[36mClosing the New Parent AI Assistant...\033[0m")
             break
 
         # If keywords are detected, route the user input to the listing service.
