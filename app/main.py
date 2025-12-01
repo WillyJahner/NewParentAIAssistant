@@ -75,6 +75,10 @@ class NewParentAIAssistantApp:
 ######################################################################
 def print_intro_message():
     print("\nWelcome to the New Parent AI Assistant!")
+    print("This application is designed to help answer questions for new parents.")
+    print("This is the initial version of the application, so it only contains information " + \
+          "about developmental milestones, feeding, and sleep for babies in their first year.")
+    print("Future releases of this application will include more categories of baby care.")
     print("If you wish to end the program at any time, enter 'exit', 'end', or 'quit'\n\n")
 
 ######################################################################
